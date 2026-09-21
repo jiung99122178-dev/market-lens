@@ -1,2 +1,2 @@
-:HL["/market-lens/_next/static/chunks/31-dg9pz181qu.css","style"]
-0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}},"staleTime":300,"buildId":"UYWmR-V3lo2N7XlwFPuXU"}
+:HL["/market-lens/_next/static/chunks/0fzroghbua2tj.css","style"]
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}},"staleTime":300,"buildId":"Vyf7ueZ6i0UPbnnDX5h6J"}
