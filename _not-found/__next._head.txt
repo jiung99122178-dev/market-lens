@@ -1,6 +1,6 @@
 1:"$Sreact.fragment"
-2:I[9678,["/market-lens/_next/static/chunks/44rmzwx08scfc.js"],"ViewportBoundary"]
-3:I[9678,["/market-lens/_next/static/chunks/44rmzwx08scfc.js"],"MetadataBoundary"]
+2:I[9678,["/market-lens/_next/static/chunks/2j84s_9ze7bu-.js"],"ViewportBoundary"]
+3:I[9678,["/market-lens/_next/static/chunks/2j84s_9ze7bu-.js"],"MetadataBoundary"]
 4:"$Sreact.suspense"
-5:I[85709,["/market-lens/_next/static/chunks/44rmzwx08scfc.js"],"IconMark"]
-0:{"rsc":["$","$1","h",{"children":[["$","meta",null,{"name":"robots","content":"noindex"}],["$","$L2",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]}],["$","div",null,{"hidden":true,"children":["$","$L3",null,{"children":["$","$4",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"Market Lens"}],["$","meta","1",{"name":"description","content":"포트폴리오 및 FRED PPI 공개 조회 스냅샷"}],["$","link","2",{"rel":"icon","href":"/market-lens/favicon.svg"}],["$","$L5","3",{}]]}]}]}],null]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"FBgx6Xn4xB_k_tlYtzL59"}
+5:I[85709,["/market-lens/_next/static/chunks/2j84s_9ze7bu-.js"],"IconMark"]
+0:{"rsc":["$","$1","h",{"children":[["$","meta",null,{"name":"robots","content":"noindex"}],["$","$L2",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]}],["$","div",null,{"hidden":true,"children":["$","$L3",null,{"children":["$","$4",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"Market Lens"}],["$","meta","1",{"name":"description","content":"포트폴리오 및 FRED PPI 공개 조회 스냅샷"}],["$","link","2",{"rel":"icon","href":"/market-lens/favicon.svg"}],["$","$L5","3",{}]]}]}]}],null]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"dhgz2l1u2iz31NAuJzNmr"}
