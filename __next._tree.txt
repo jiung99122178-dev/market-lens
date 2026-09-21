@@ -1,2 +1,2 @@
 :HL["/market-lens/_next/static/chunks/0-mxwzstw68xw.css","style"]
-0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}},"staleTime":300,"buildId":"8so0dEEBr_Gv6RR7wR-dO"}
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}},"staleTime":300,"buildId":"TeIPeyGhjiNLa9B4jKpbd"}
