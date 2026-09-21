@@ -1,0 +1,49 @@
+name: Prices and Pages
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+  schedule:
+    # 08:17 and retry 10:17 KST, Tuesday through Saturday. After US close in both DST seasons.
+    - cron: '17 23 * * 1-5'
+    - cron: '17 1 * * 2-6'
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+concurrency:
+  group: pages
+  cancel-in-progress: false
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: node --test scripts/update-prices.test.mjs
+      - name: Refresh completed daily prices
+        if: github.event_name != 'push'
+        run: node scripts/update-prices.mjs
+      - name: Save validated prices
+        if: github.event_name != 'push'
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/history.json data/manifest.json
+          if ! git diff --cached --quiet; then
+            git commit -m 'Refresh completed US market prices'
+            git push
+          fi
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: '.'
+      - name: Deploy
+        id: deployment
+        uses: actions/deploy-pages@v4
