@@ -1,0 +1,52 @@
+name: Liquidity and Pages
+on:
+  workflow_dispatch:
+  schedule:
+    # KST Tue-Sat 08:47, retry 10:47. Independent of portfolio price collection.
+    - cron: '47 23 * * 1-5'
+    - cron: '47 1 * * 2-6'
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+concurrency:
+  group: pages
+  cancel-in-progress: false
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: node --test scripts/update-liquidity.test.mjs
+      - name: Collect FRED liquidity
+        id: collect
+        continue-on-error: true
+        run: node scripts/update-liquidity.mjs
+      - name: Save data or failure status
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/liquidity.json data/liquidity-status.json
+          if ! git diff --cached --quiet; then
+            git commit -m 'Refresh FRED liquidity snapshot and collection status'
+            git push
+          fi
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: '.'
+      - name: Deploy
+        id: deployment
+        uses: actions/deploy-pages@v4
+      - name: Report collection failure
+        if: steps.collect.outcome == 'failure'
+        run: exit 1
