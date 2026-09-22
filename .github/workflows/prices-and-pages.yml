@@ -27,18 +27,23 @@ jobs:
         with:
           node-version: '22'
       - run: node --test scripts/update-prices.test.mjs
+      - run: node --test scripts/update-vix.test.mjs
       - name: Refresh completed daily prices
         if: github.event_name != 'push'
         run: node scripts/update-prices.mjs
+      - name: Refresh VIX daily closes
+        if: github.event_name != 'push'
+        continue-on-error: true
+        run: node scripts/update-vix.mjs
       - name: Save validated prices
         if: github.event_name != 'push'
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add data/history.json data/manifest.json
+          git add data/history.json data/manifest.json data/vix.json
           if ! git diff --cached --quiet; then
             git commit -m 'Refresh completed US market prices'
-            git push
+          git push
           fi
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
