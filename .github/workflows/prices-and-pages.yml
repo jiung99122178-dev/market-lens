@@ -4,8 +4,8 @@ on:
     branches: [main]
   workflow_dispatch:
   schedule:
-    # 08:17 and retry 10:17 KST, Tuesday through Saturday. After US close in both DST seasons.
-    - cron: '17 23 * * 1-5'
+    # 08:00 and retry 10:17 KST, Tuesday through Saturday. After US close in both DST seasons.
+    - cron: '0 23 * * 1-5'
     - cron: '17 1 * * 2-6'
 permissions:
   contents: write
