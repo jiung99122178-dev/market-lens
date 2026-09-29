@@ -3,6 +3,11 @@ on:
   push:
     branches: [main]
   workflow_dispatch:
+    inputs:
+      earnings_only:
+        description: Refresh only the earnings screener stock prices
+        type: boolean
+        default: false
   schedule:
     # 08:00 and retry 10:17 KST, Tuesday through Saturday. After US close in both DST seasons.
     - cron: '0 23 * * 1-5'
@@ -23,24 +28,36 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: main
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
       - run: node --test scripts/update-prices.test.mjs
       - run: node --test scripts/update-vix.test.mjs
+      - run: node --test scripts/earnings-prices-core.test.mjs scripts/update-earnings-prices.test.mjs
       - name: Refresh completed daily prices
-        if: github.event_name != 'push'
+        id: portfolio
+        if: github.event_name != 'push' && inputs.earnings_only != true
+        continue-on-error: true
+        timeout-minutes: 8
         run: node scripts/update-prices.mjs
       - name: Refresh VIX daily closes
-        if: github.event_name != 'push'
+        if: github.event_name != 'push' && inputs.earnings_only != true
         continue-on-error: true
         run: node scripts/update-vix.mjs
+      - name: Refresh earnings screener stock prices
+        id: earnings
+        if: github.event_name != 'push'
+        continue-on-error: true
+        timeout-minutes: 8
+        run: node scripts/update-earnings-prices.mjs
       - name: Save validated prices
         if: github.event_name != 'push'
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add data/history.json data/manifest.json data/vix.json
+          git add data/history.json data/manifest.json data/vix.json 'data/earnings-prices/*.json'
           if ! git diff --cached --quiet; then
             git commit -m 'Refresh completed US market prices'
           git push
@@ -52,3 +69,6 @@ jobs:
       - name: Deploy
         id: deployment
         uses: actions/deploy-pages@v4
+      - name: Report collection failure after preserving and publishing available data
+        if: github.event_name != 'push' && (steps.portfolio.outcome == 'failure' || steps.earnings.outcome == 'failure')
+        run: exit 1
