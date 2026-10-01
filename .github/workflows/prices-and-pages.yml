@@ -35,6 +35,7 @@ jobs:
           node-version: '22'
       - run: node --test scripts/update-prices.test.mjs
       - run: node --test scripts/update-vix.test.mjs
+      - run: node --test scripts/update-breadth.test.mjs
       - run: node --test scripts/earnings-prices-core.test.mjs scripts/update-earnings-prices.test.mjs
       - name: Refresh completed daily prices
         id: portfolio
@@ -52,12 +53,17 @@ jobs:
         continue-on-error: true
         timeout-minutes: 8
         run: node scripts/update-earnings-prices.mjs
+      - name: Refresh SPY and RSP adjusted daily closes
+        id: breadth
+        if: github.event_name != 'push' && inputs.earnings_only != true
+        continue-on-error: true
+        run: node scripts/update-breadth.mjs
       - name: Save validated prices
         if: github.event_name != 'push'
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add data/history.json data/manifest.json data/vix.json 'data/earnings-prices/*.json'
+          git add data/history.json data/manifest.json data/vix.json data/breadth.json 'data/earnings-prices/*.json'
           if ! git diff --cached --quiet; then
             git commit -m 'Refresh completed US market prices'
           git push
@@ -70,5 +76,5 @@ jobs:
         id: deployment
         uses: actions/deploy-pages@v4
       - name: Report collection failure after preserving and publishing available data
-        if: github.event_name != 'push' && (steps.portfolio.outcome == 'failure' || steps.earnings.outcome == 'failure')
+        if: github.event_name != 'push' && (steps.portfolio.outcome == 'failure' || steps.earnings.outcome == 'failure' || steps.breadth.outcome == 'failure')
         run: exit 1
