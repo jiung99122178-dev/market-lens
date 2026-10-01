@@ -25,6 +25,7 @@ test('failed pair fetch, regressed dates and truncation preserve previous bytes'
  const points=rows.map(r=>({date:r.date,price:r.spy}));
  await assert.rejects(updateBreadth({file,fetcher:async()=>points.slice(0,-1)}));assert.equal(await fs.readFile(file,'utf8'),before);
  await assert.rejects(updateBreadth({file,fetcher:async()=>points.slice(40)}));assert.equal(await fs.readFile(file,'utf8'),before);
+ await assert.rejects(updateBreadth({file,fetcher:async()=>points.slice(1)}),/early history missing/);assert.equal(await fs.readFile(file,'utf8'),before);
  const snapshot=await updateBreadth({file,fetcher:async()=>points.map(r=>({...r,price:r.price*.99}))});assert.equal(snapshot.rows[0].spy,99);assert.equal(snapshot.rows.length,300);
  // Only remove the exact temporary files created by this test.
  await fs.unlink(file);await fs.rmdir(dir);

@@ -26,11 +26,11 @@ export function joinBreadth(spy,rsp) {
  return rows;
 }
 async function fetchSymbol(symbol,now){
- const start=new Date(now);start.setUTCFullYear(start.getUTCFullYear()-5);start.setUTCDate(start.getUTCDate()-14);
+ // Fetch the full available daily history on every refresh, including dividend revisions.
  let failure;
  for(const host of ['query1','query2'])try{
   const url=new URL(`https://${host}.finance.yahoo.com/v8/finance/chart/${symbol}`);
-  for(const [k,v] of Object.entries({period1:Math.floor(start.getTime()/1000),period2:Math.floor(now.getTime()/1000),interval:'1d',includeAdjustedClose:'true'}))url.searchParams.set(k,String(v));
+  for(const [k,v] of Object.entries({period1:0,period2:Math.floor(now.getTime()/1000),interval:'1d',includeAdjustedClose:'true'}))url.searchParams.set(k,String(v));
   const response=await fetch(url,{headers:{'User-Agent':'Mozilla/5.0'},signal:AbortSignal.timeout(30000)});
   if(!response.ok)throw Error(symbol+': Yahoo HTTP '+response.status);
   return parseAdjusted(await response.json(),symbol,now);
@@ -43,6 +43,7 @@ export async function updateBreadth({file=path.resolve(path.dirname(fileURLToPat
  const rows=joinBreadth(spy,rsp);
  if(rows.length<252)throw Error('Breadth history too short; previous file preserved');
  if(old?.rows?.at(-1)?.date>rows.at(-1).date)throw Error('Breadth date regressed; previous file preserved');
+ if(old?.rows?.[0]?.date<rows[0].date)throw Error('Breadth early history missing; previous file preserved');
  if(old?.rows?.length&&rows.length<old.rows.length*.95)throw Error('Breadth history unexpectedly truncated; previous file preserved');
  const snapshot={version:1,source:'Yahoo Finance',priceBasis:'adjusted-close',currency:'USD',updatedAt:now.toISOString(),symbolDates:{SPY:spy.at(-1).date,RSP:rsp.at(-1).date},rows};
  // Replace the entire validated pair together: dividend revisions must not mix with old adjusted prices.
