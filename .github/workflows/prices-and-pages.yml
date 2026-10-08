@@ -36,7 +36,7 @@ jobs:
       - run: node --test scripts/update-prices.test.mjs
       - run: node --test scripts/update-vix.test.mjs
       - run: node --test scripts/update-breadth.test.mjs
-      - run: node --test scripts/adr-core.test.mjs scripts/update-adr.test.mjs
+      - run: node --test scripts/adr-core.test.mjs scripts/update-adr.test.mjs scripts/weekly-sma-core.test.mjs
       - run: node --test scripts/earnings-prices-core.test.mjs scripts/update-earnings-prices.test.mjs
       - name: Refresh completed daily prices
         id: portfolio
@@ -59,7 +59,7 @@ jobs:
         if: github.event_name != 'push' && inputs.earnings_only != true
         continue-on-error: true
         run: node scripts/update-breadth.mjs
-      - name: Refresh classification ADR daily closes
+      - name: Refresh classification ADR and completed weekly SMA
         id: adr
         if: github.event_name != 'push' && inputs.earnings_only != true
         continue-on-error: true
@@ -72,7 +72,7 @@ jobs:
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add data/history.json data/manifest.json data/vix.json data/breadth.json data/adr.json data/adr-state.json 'data/earnings-prices/*.json'
+          git add data/history.json data/manifest.json data/vix.json data/breadth.json data/adr.json data/adr-state.json data/weekly-sma.json 'data/earnings-prices/*.json'
           if ! git diff --cached --quiet; then
             git commit -m 'Refresh completed US market prices'
           git push

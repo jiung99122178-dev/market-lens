@@ -12,7 +12,7 @@ test('initial, incremental, coverage failure preserves snapshots, date regressio
  const initial=await updateAdr(options);assert.equal(initial.groups[0].points.at(-1)[1],100);assert.equal(initial.latestValid,2);
  const firstDate=initial.groups[0].points[0][0];starts.length=0;end='2026-10-08';
  const next=await updateAdr({...options,now:new Date('2026-10-09T03:00Z'),cacheDir:path.join(dir,'cache2')});
- assert.equal(next.asOf,end);assert.equal(next.groups[0].points.at(-1)[1],100);assert.ok(starts.every(d=>d>'2026-07-01'));assert.ok(next.groups[0].points[0][0]>=firstDate);
+ assert.equal(next.asOf,end);assert.equal(next.groups[0].points.at(-1)[1],100);assert.ok(starts.every(d=>d>'2026-02-01'&&d<'2026-04-01'));assert.ok(next.groups[0].points[0][0]>=firstDate);
  const before=await fs.readFile(path.join(dataDir,'adr.json'),'utf8'),state=await fs.readFile(path.join(dataDir,'adr-state.json'),'utf8');
  fail=true;await assert.rejects(()=>updateAdr({...options,now:new Date('2026-10-09T03:00Z'),cacheDir:path.join(dir,'cache3')}),/publication blocked/);
  assert.equal(await fs.readFile(path.join(dataDir,'adr.json'),'utf8'),before);assert.equal(await fs.readFile(path.join(dataDir,'adr-state.json'),'utf8'),state);

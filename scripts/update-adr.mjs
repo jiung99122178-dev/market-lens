@@ -2,6 +2,7 @@ import fs from 'node:fs/promises';
 import path from 'node:path';
 import {fileURLToPath,pathToFileURL} from 'node:url';
 import {parseCloses,signsForDates,aggregateAdr,yahooSymbol,nyDate} from './adr-core.mjs';
+import {buildWeeklySnapshot} from './weekly-sma-core.mjs';
 const sleep=ms=>new Promise(r=>setTimeout(r,ms));
 async function read(file,fallback){try{return JSON.parse(await fs.readFile(file,'utf8'));}catch(e){if(e.code==='ENOENT')return fallback;throw e;}}
 async function atomic(file,value){await fs.mkdir(path.dirname(file),{recursive:true});await fs.writeFile(file+'.tmp',JSON.stringify(value));await fs.rename(file+'.tmp',file);}
@@ -29,8 +30,10 @@ export async function updateAdr({dataDir=path.resolve(path.dirname(fileURLToPath
  const dates=(calendar.sessionDates??calendar.rows.map(r=>r[0])).filter(d=>d<=asOf);
  if(dates.length<1200)throw Error('Reference trading calendar shorter than five years');
  if(before?.asOf>asOf)throw Error('ADR calendar regressed');
- const overlap=dates.at(-46),oldIndex=new Map((before?.dates??[]).map((d,i)=>[d,i]));
- const results={},issues=[];let next=0,done=0,success=0;
+ // The same request feeds ADR and the 20-week screener. Refetch 30 weeks
+ // together so all weekly prices share the latest split adjustment basis.
+ const overlap=new Date(Date.parse(asOf+'T00:00:00Z')-210*86400000).toISOString().slice(0,10),oldIndex=new Map((before?.dates??[]).map((d,i)=>[d,i]));
+ const results={},weeklyPrices={},issues=[];let next=0,done=0,success=0;
  const selected=rows.slice(0,limit);
  await fs.mkdir(cacheDir,{recursive:true});
  async function worker(){while(next<selected.length){const item=selected[next++],symbol=yahooSymbol(item.ticker),old=before?.series?.[item.ticker];
@@ -42,6 +45,7 @@ export async function updateAdr({dataDir=path.resolve(path.dirname(fileURLToPath
     let value=await read(cache,null);
     if(!value||value.requestedStart>start||value.asOf!==asOf){requested=true;value={...await fetcher(symbol,start,now),requestedStart:start,asOf};}
     await atomic(cache,value);
+    weeklyPrices[item.ticker]=value;
     const fresh=signsForDates(dates,value.rows),replaceFrom=value.rows[1]?.[0]??asOf;
     const signs=dates.map((date,i)=>date>=replaceFrom?fresh[i]:(old?.signs[oldIndex.get(date)]??fresh[i])).join('');
     results[item.ticker]={symbol,name:value.name,firstTradeDate:value.firstTradeDate,latest:value.rows.at(-1)[0],signs};success++;
@@ -64,6 +68,11 @@ export async function updateAdr({dataDir=path.resolve(path.dirname(fileURLToPath
  const state={version:1,universeHash:universe.sourceSha256,asOf,latestValid:valid,dates,series:results};
  // Both are written only after all validation. Workflow commits them together.
  await atomic(path.join(dataDir,'adr-state.json'),state);await atomic(path.join(dataDir,'adr.json'),snapshot);
+ // A weekly failure preserves its own prior snapshot without discarding valid ADR.
+ const weekly=buildWeeklySnapshot(universe,weeklyPrices,calendar,now),oldWeekly=await read(path.join(dataDir,'weekly-sma.json'),null);
+ if(weekly.valid<rows.length*.8||(oldWeekly&&weekly.valid<oldWeekly.valid*.97)||oldWeekly?.asOf>weekly.asOf)throw Error('Weekly SMA coverage/date check failed; prior weekly snapshot preserved');
+ await atomic(path.join(dataDir,'weekly-sma.json'),weekly);
+ console.log(JSON.stringify({weeklyAsOf:weekly.asOf,weeklyValid:weekly.valid,counts:weekly.counts}));
  console.log(JSON.stringify({saved:true,from,asOf,groups:groups.length,days:groups[0].points.length,fetched:success,latestValid:valid,issues:issues.length}));return snapshot;
 }
 if(process.argv[1]&&import.meta.url===pathToFileURL(process.argv[1]).href)await updateAdr({...(process.env.ADR_DATA_DIR?{dataDir:path.resolve(process.env.ADR_DATA_DIR)}:{}),...(process.env.ADR_UNIVERSE_FILE?{universeFile:path.resolve(process.env.ADR_UNIVERSE_FILE)}:{}),...(process.env.ADR_CACHE_DIR?{cacheDir:path.resolve(process.env.ADR_CACHE_DIR)}:{}),...(process.env.ADR_LIMIT?{limit:Number(process.env.ADR_LIMIT)}:{})});
