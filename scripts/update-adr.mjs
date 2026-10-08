@@ -3,6 +3,7 @@ import path from 'node:path';
 import {fileURLToPath,pathToFileURL} from 'node:url';
 import {parseCloses,signsForDates,aggregateAdr,yahooSymbol,nyDate} from './adr-core.mjs';
 import {buildWeeklySnapshot} from './weekly-sma-core.mjs';
+import {buildWeeklyBreadth} from './weekly-breadth-core.mjs';
 const sleep=ms=>new Promise(r=>setTimeout(r,ms));
 async function read(file,fallback){try{return JSON.parse(await fs.readFile(file,'utf8'));}catch(e){if(e.code==='ENOENT')return fallback;throw e;}}
 async function atomic(file,value){await fs.mkdir(path.dirname(file),{recursive:true});await fs.writeFile(file+'.tmp',JSON.stringify(value));await fs.rename(file+'.tmp',file);}
@@ -22,6 +23,8 @@ export async function updateAdr({dataDir=path.resolve(path.dirname(fileURLToPath
  const universe=await read(universeFile);if(!universe?.rows?.length)throw Error('Missing ADR universe');
  const rows=universe.rows;if(new Set(rows.map(r=>r.ticker)).size!==rows.length)throw Error('Duplicate universe ticker');
  const before=await read(path.join(dataDir,'adr-state.json'),null);
+ const oldWeekly=await read(path.join(dataDir,'weekly-sma.json'),null);
+ const bootstrapBreadth=oldWeekly?.breadth?.universeHash!==universe.sourceSha256;
  const today=nyDate(now),startDate=new Date(today+'T00:00:00Z');startDate.setUTCFullYear(startDate.getUTCFullYear()-5);
  const from=startDate.toISOString().slice(0,10),warmStart=new Date(+startDate-70*86400000).toISOString().slice(0,10);
  const calendar=await fetcher('SPY',warmStart,now),asOf=calendar.rows.at(-1)[0];
@@ -39,7 +42,7 @@ export async function updateAdr({dataDir=path.resolve(path.dirname(fileURLToPath
  async function worker(){while(next<selected.length){const item=selected[next++],symbol=yahooSymbol(item.ticker),old=before?.series?.[item.ticker];
    // Keep odd provider identifiers unresolved rather than silently substituting companies.
    if(/\.(EQ|T)$/.test(symbol)){issues.push({ticker:item.ticker,reason:'Provider identifier needs Yahoo mapping'});done++;continue;}
-   const start=old&&before?.universeHash===universe.sourceSha256?overlap:warmStart;
+   const start=!bootstrapBreadth&&old&&before?.universeHash===universe.sourceSha256?overlap:warmStart;
    const cache=path.join(cacheDir,encodeURIComponent(symbol)+'.json');
    let requested=false;try{
     let value=await read(cache,null);
@@ -69,8 +72,11 @@ export async function updateAdr({dataDir=path.resolve(path.dirname(fileURLToPath
  // Both are written only after all validation. Workflow commits them together.
  await atomic(path.join(dataDir,'adr-state.json'),state);await atomic(path.join(dataDir,'adr.json'),snapshot);
  // A weekly failure preserves its own prior snapshot without discarding valid ADR.
- const weekly=buildWeeklySnapshot(universe,weeklyPrices,calendar,now),oldWeekly=await read(path.join(dataDir,'weekly-sma.json'),null);
+ const weekly=buildWeeklySnapshot(universe,weeklyPrices,calendar,now);
  if(weekly.valid<rows.length*.8||(oldWeekly&&weekly.valid<oldWeekly.valid*.97)||oldWeekly?.asOf>weekly.asOf)throw Error('Weekly SMA coverage/date check failed; prior weekly snapshot preserved');
+ weekly.breadth=buildWeeklyBreadth(universe,weeklyPrices,calendar,now,{previous:oldWeekly?.breadth,rebuildStart:bootstrapBreadth?warmStart:overlap});
+ const lastBreadth=weekly.breadth.groups.find(g=>g.type==='all').points.at(-1);
+ if(lastBreadth[2]!==weekly.counts.above||lastBreadth[3]!==weekly.valid)throw Error('Weekly breadth and screener totals disagree');
  await atomic(path.join(dataDir,'weekly-sma.json'),weekly);
  console.log(JSON.stringify({weeklyAsOf:weekly.asOf,weeklyValid:weekly.valid,counts:weekly.counts}));
  console.log(JSON.stringify({saved:true,from,asOf,groups:groups.length,days:groups[0].points.length,fetched:success,latestValid:valid,issues:issues.length}));return snapshot;

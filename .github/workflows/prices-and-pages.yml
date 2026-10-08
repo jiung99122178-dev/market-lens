@@ -36,7 +36,7 @@ jobs:
       - run: node --test scripts/update-prices.test.mjs
       - run: node --test scripts/update-vix.test.mjs
       - run: node --test scripts/update-breadth.test.mjs
-      - run: node --test scripts/adr-core.test.mjs scripts/update-adr.test.mjs scripts/weekly-sma-core.test.mjs
+      - run: node --test scripts/adr-core.test.mjs scripts/update-adr.test.mjs scripts/weekly-sma-core.test.mjs scripts/weekly-breadth-core.test.mjs
       - run: node --test scripts/earnings-prices-core.test.mjs scripts/update-earnings-prices.test.mjs
       - name: Refresh completed daily prices
         id: portfolio
