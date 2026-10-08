@@ -22,7 +22,7 @@ concurrency:
 jobs:
   publish:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 45
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
@@ -36,6 +36,7 @@ jobs:
       - run: node --test scripts/update-prices.test.mjs
       - run: node --test scripts/update-vix.test.mjs
       - run: node --test scripts/update-breadth.test.mjs
+      - run: node --test scripts/adr-core.test.mjs scripts/update-adr.test.mjs
       - run: node --test scripts/earnings-prices-core.test.mjs scripts/update-earnings-prices.test.mjs
       - name: Refresh completed daily prices
         id: portfolio
@@ -58,12 +59,20 @@ jobs:
         if: github.event_name != 'push' && inputs.earnings_only != true
         continue-on-error: true
         run: node scripts/update-breadth.mjs
-      - name: Save validated prices
+      - name: Refresh classification ADR daily closes
+        id: adr
+        if: github.event_name != 'push' && inputs.earnings_only != true
+        continue-on-error: true
+        timeout-minutes: 18
+        env:
+          ADR_CACHE_DIR: ${{ runner.temp }}/adr-cache
+        run: node scripts/update-adr.mjs
+      - name: Save validated prices and ADR
         if: github.event_name != 'push'
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add data/history.json data/manifest.json data/vix.json data/breadth.json 'data/earnings-prices/*.json'
+          git add data/history.json data/manifest.json data/vix.json data/breadth.json data/adr.json data/adr-state.json 'data/earnings-prices/*.json'
           if ! git diff --cached --quiet; then
             git commit -m 'Refresh completed US market prices'
           git push
@@ -76,5 +85,5 @@ jobs:
         id: deployment
         uses: actions/deploy-pages@v4
       - name: Report collection failure after preserving and publishing available data
-        if: github.event_name != 'push' && (steps.portfolio.outcome == 'failure' || steps.earnings.outcome == 'failure' || steps.breadth.outcome == 'failure')
+        if: github.event_name != 'push' && (steps.portfolio.outcome == 'failure' || steps.earnings.outcome == 'failure' || steps.breadth.outcome == 'failure' || steps.adr.outcome == 'failure')
         run: exit 1

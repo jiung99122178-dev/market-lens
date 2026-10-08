@@ -1,0 +1,20 @@
+import test from 'node:test';import assert from 'node:assert/strict';import fs from 'node:fs/promises';import os from 'node:os';import path from 'node:path';
+import {updateAdr} from './update-adr.mjs';
+test('initial, incremental, coverage failure preserves snapshots, date regression',async()=>{
+ const dir=await fs.mkdtemp(path.join(os.tmpdir(),'adr-test-')),dataDir=path.join(dir,'data');await fs.mkdir(dataDir);
+ const universeFile=path.join(dataDir,'adr-universe.json');
+ const universe={sourceSha256:'fixture',classificationAsOf:'2026-10-08',rows:[{ticker:'A',sector:'Tech',subsector:'AI'},{ticker:'B',sector:'Other',subsector:'Retail'}]};
+ await fs.writeFile(universeFile,JSON.stringify(universe));
+ const all=[];for(let d=new Date('2021-07-01');d<=new Date('2026-10-08');d=new Date(+d+86400000))if(d.getUTCDay()!==0&&d.getUTCDay()!==6)all.push(d.toISOString().slice(0,10));
+ let end='2026-10-07',fail=false;const starts=[];
+ const fetcher=async(symbol,start)=>{if(symbol!=='SPY'){starts.push(start);if(fail)throw Error('fixture network failure');}return {symbol,name:symbol,firstTradeDate:'2000-01-01',rows:all.map((d,i)=>[d,symbol==='B'?20000-i:100+i]).filter(([d])=>d>=start&&d<=end)};};
+ const options={dataDir,universeFile,now:new Date('2026-10-08T03:00Z'),fetcher,cacheDir:path.join(dir,'cache1')};
+ const initial=await updateAdr(options);assert.equal(initial.groups[0].points.at(-1)[1],100);assert.equal(initial.latestValid,2);
+ const firstDate=initial.groups[0].points[0][0];starts.length=0;end='2026-10-08';
+ const next=await updateAdr({...options,now:new Date('2026-10-09T03:00Z'),cacheDir:path.join(dir,'cache2')});
+ assert.equal(next.asOf,end);assert.equal(next.groups[0].points.at(-1)[1],100);assert.ok(starts.every(d=>d>'2026-07-01'));assert.ok(next.groups[0].points[0][0]>=firstDate);
+ const before=await fs.readFile(path.join(dataDir,'adr.json'),'utf8'),state=await fs.readFile(path.join(dataDir,'adr-state.json'),'utf8');
+ fail=true;await assert.rejects(()=>updateAdr({...options,now:new Date('2026-10-09T03:00Z'),cacheDir:path.join(dir,'cache3')}),/publication blocked/);
+ assert.equal(await fs.readFile(path.join(dataDir,'adr.json'),'utf8'),before);assert.equal(await fs.readFile(path.join(dataDir,'adr-state.json'),'utf8'),state);
+ end='2026-10-06';await assert.rejects(()=>updateAdr(options),/regressed/);
+});
