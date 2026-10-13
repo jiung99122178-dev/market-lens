@@ -8,10 +8,6 @@ on:
         description: Refresh only the earnings screener stock prices
         type: boolean
         default: false
-  schedule:
-    # 08:00 and retry 10:17 KST, Tuesday through Saturday. After US close in both DST seasons.
-    - cron: '0 23 * * 1-5'
-    - cron: '17 1 * * 2-6'
 permissions:
   contents: write
   pages: write
