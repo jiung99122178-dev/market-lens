@@ -1,23 +1,23 @@
 {
-  "asOf": "2026-10-27",
+  "asOf": "2026-10-28",
   "rows": [
     {
       "name": "페트로브라스(ADR)",
       "ticker": "PBR",
       "troySector": "Oil & Gas Integrated",
-      "downsideVol": -1.7033697953271028,
-      "rs20d": 7.266549384829357,
-      "priceVs20w": 11.491638127140469,
-      "epsEstimate3m": 10.06128166163074,
+      "downsideVol": -1.698808548148148,
+      "rs20d": 4.298196895407891,
+      "priceVs20w": 10.216129677806695,
+      "epsEstimate3m": 12.409429864756344,
       "epsGrowth2728": -12.004632109738449
     },
     {
       "name": "워터스",
       "ticker": "WAT",
       "troySector": "Life Science Tools & Instruments",
-      "downsideVol": -1.3084768376230778,
-      "rs20d": 4.99697157547585,
-      "priceVs20w": 15.09457135838861,
+      "downsideVol": -1.301908636364342,
+      "rs20d": 7.236735477447742,
+      "priceVs20w": 17.02102859638812,
       "epsEstimate3m": 0.2700271339449389,
       "epsGrowth2728": 12.56792311882393
     },
@@ -26,8 +26,8 @@
       "ticker": "SHOP",
       "troySector": "E-commerce Platform",
       "downsideVol": -2.671038682912698,
-      "rs20d": 11.087744679776513,
-      "priceVs20w": 18.38962689524437,
+      "rs20d": 12.078194235272477,
+      "priceVs20w": 20.007133939718223,
       "epsEstimate3m": 4.679399830167673,
       "epsGrowth2728": 33.38172888739824
     },
@@ -36,28 +36,28 @@
       "ticker": "GOOGL",
       "troySector": "AI Hyperscalers",
       "downsideVol": -1.3382726264094489,
-      "rs20d": -6.596470038655355,
-      "priceVs20w": -6.858500926824462,
-      "epsEstimate3m": 2.205132897271883,
-      "epsGrowth2728": -2.8933530225931055
+      "rs20d": -6.704315805310069,
+      "priceVs20w": -5.665335371652002,
+      "epsEstimate3m": 2.318691875307102,
+      "epsGrowth2728": -2.7925445984464705
     },
     {
       "name": "가이드와이어 소프트웨어",
       "ticker": "GWRE",
       "troySector": "Software - Application",
-      "downsideVol": -2.6960140276544102,
-      "rs20d": 17.88963113317592,
-      "priceVs20w": 8.396134522710952,
-      "epsEstimate3m": 30.189523603322844,
-      "epsGrowth2728": 24.77602574762756
+      "downsideVol": -2.6859581106642323,
+      "rs20d": 15.67366299728279,
+      "priceVs20w": 7.043572223308825,
+      "epsEstimate3m": 30.4160101763349,
+      "epsGrowth2728": 24.886854793287554
     },
     {
       "name": "인튜이티브 서지컬",
       "ticker": "ISRG",
       "troySector": "Surgical Equipment & Robotics",
-      "downsideVol": -1.5274049201093751,
-      "rs20d": 7.4510087621763255,
-      "priceVs20w": 13.1619120373484,
+      "downsideVol": -1.518520176775194,
+      "rs20d": 7.930513082808499,
+      "priceVs20w": 12.754785376756805,
       "epsEstimate3m": 3.1657296025591632,
       "epsGrowth2728": 11.7806167786853
     },
@@ -66,28 +66,28 @@
       "ticker": "TEM",
       "troySector": "Liquid Biopsy",
       "downsideVol": -3.169675100913044,
-      "rs20d": -13.215755030498977,
-      "priceVs20w": 16.004710932820963,
-      "epsEstimate3m": 32.77491610698227,
+      "rs20d": -7.575685724674807,
+      "priceVs20w": 22.735556223090004,
+      "epsEstimate3m": 32.34232505926595,
       "epsGrowth2728": 87.01274464627397
     },
     {
       "name": "랄프 로렌",
       "ticker": "RL",
       "troySector": "Apparel and Accessories",
-      "downsideVol": -1.5139121794384611,
-      "rs20d": 9.189633227562366,
-      "priceVs20w": 3.8620764716891243,
-      "epsEstimate3m": 1.818292798686481,
-      "epsGrowth2728": 10.49013962384528
+      "downsideVol": -1.5056529177633584,
+      "rs20d": 8.403945105193555,
+      "priceVs20w": 3.4366478411754997,
+      "epsEstimate3m": 1.8780596120700384,
+      "epsGrowth2728": 10.455750562642777
     },
     {
       "name": "에스티 로더",
       "ticker": "EL",
       "troySector": "Cosmetics",
-      "downsideVol": -1.9958661181984128,
-      "rs20d": 14.044486428699287,
-      "priceVs20w": 16.61321221774972,
+      "downsideVol": -1.9985205639440002,
+      "rs20d": 16.422502506309012,
+      "priceVs20w": 17.585680170392195,
       "epsEstimate3m": 23.684031084298816,
       "epsGrowth2728": 26.57245687980298
     },
@@ -96,8 +96,8 @@
       "ticker": "EBAY",
       "troySector": "E-commerce Platform",
       "downsideVol": -1.7442145759545453,
-      "rs20d": 11.244400606601213,
-      "priceVs20w": 6.2733090115400625,
+      "rs20d": 9.958667262983912,
+      "priceVs20w": 6.435554272933852,
       "epsEstimate3m": 0.022330698131094315,
       "epsGrowth2728": 11.242076011838448
     },
@@ -106,8 +106,8 @@
       "ticker": "ACN",
       "troySector": "IT Consulting",
       "downsideVol": -2.1436813525317464,
-      "rs20d": 31.878886236300353,
-      "priceVs20w": 31.97482398960636,
+      "rs20d": 31.152614840470562,
+      "priceVs20w": 36.284102521031954,
       "epsEstimate3m": 8.646498322056093,
       "epsGrowth2728": 6.860879906893473
     },
@@ -116,19 +116,19 @@
       "ticker": "TGT",
       "troySector": "General Merchandise & Discount Retail",
       "downsideVol": -1.4170365785915258,
-      "rs20d": -6.016777895200587,
-      "priceVs20w": -1.0208210035677068,
-      "epsEstimate3m": 6.91593396256553,
+      "rs20d": -6.068127006723434,
+      "priceVs20w": -0.4171569151780852,
+      "epsEstimate3m": 6.958183297310621,
       "epsGrowth2728": 1.720197714151451
     },
     {
       "name": "쉘(ADR)",
       "ticker": "SHEL",
       "troySector": "Oil & Gas Integrated",
-      "downsideVol": -1.1048575951946904,
-      "rs20d": 9.394289004181754,
-      "priceVs20w": 13.733684296219906,
-      "epsEstimate3m": 21.168423269755092,
+      "downsideVol": -1.1108373963125,
+      "rs20d": 9.347035304316641,
+      "priceVs20w": 14.153318574467155,
+      "epsEstimate3m": 21.491880837785196,
       "epsGrowth2728": -13.19229570354191
     },
     {
@@ -136,8 +136,8 @@
       "ticker": "GDDY",
       "troySector": "Software - Application",
       "downsideVol": -2.3538276880750004,
-      "rs20d": 12.160473034439057,
-      "priceVs20w": 11.184389590268617,
+      "rs20d": 10.216971316611566,
+      "priceVs20w": 11.51058429494729,
       "epsEstimate3m": 1.579708783654812,
       "epsGrowth2728": 17.587059734446925
     },
@@ -145,15 +145,15 @@
       "name": "DOCU",
       "ticker": "DOCU",
       "troySector": "Software - Application",
-      "downsideVol": -2.1852824355873017,
-      "rs20d": 21.663405857420347,
-      "priceVs20w": 32.043585327775205,
+      "downsideVol": -2.202205222032,
+      "rs20d": 23.01128604843601,
+      "priceVs20w": 34.38569981835427,
       "epsEstimate3m": 2.3633776965603133,
       "epsGrowth2728": 11.327404366461636
     }
   ],
   "subSectors": {
-    "asOf": "2026-10-27",
+    "asOf": "2026-10-28",
     "headers": [
       "섹터명",
       "시총비중",
@@ -169,1046 +169,1046 @@
       "3개월 등수"
     ],
     "benchmark": [
-      0.13005490040542966,
-      -1.0614313817947307,
-      0.6747576573832959,
-      0.4743452046815477,
-      1.6064785728316489
+      -0.17002253715279192,
+      0.32440768725332525,
+      1.2081141360679615,
+      1.4742764220162075,
+      0.09643447699119179
     ],
     "rows": [
       {
         "sector": "IT Consulting",
         "values": [
-          0.5506062360090694,
-          0.8592722694149346,
-          12.237573077759434,
-          20.03839421928999,
-          9.317441571002094,
-          17.09229327748243,
-          57,
-          2,
+          0.5547344069500333,
+          0.20881845996993942,
+          11.646928485597009,
+          19.091435409844948,
+          10.780257694451944,
+          13.948718643058445,
+          73,
+          4,
           1,
-          10,
-          10
-        ]
-      },
-      {
-        "sector": "Software - Application",
-        "values": [
-          2.3207068416141783,
-          0.5735268122634585,
-          8.590557588304737,
-          16.524623455825637,
-          2.2647117151680662,
-          15.168810193078098,
-          62,
-          12,
-          2,
-          31,
+          9,
           11
         ]
       },
       {
         "sector": "Financial Data & Analytics",
         "values": [
-          0.1445508981946743,
-          -2.478264724150381,
-          8.398616872906128,
-          16.05153518646747,
-          -8.817710076610496,
-          -3.297436938893772,
-          108,
-          13,
-          3,
-          102,
-          63
+          0.14457486120030122,
+          -2.7661658507404208,
+          7.118322705798419,
+          16.640945560625966,
+          -7.618627501162367,
+          -2.3389323368262716,
+          118,
+          14,
+          2,
+          96,
+          52
         ]
       },
       {
-        "sector": "Cyber Security",
+        "sector": "Contract Research Organizations (CROs)",
         "values": [
-          1.0944529105763081,
-          15.270345934502894,
-          9.240947694667302,
-          15.416900088053431,
-          19.59592479082255,
-          35.41088415015277,
-          1,
-          9,
+          0.10533806634539966,
+          7.598418374630311,
+          17.003047343432208,
+          15.562349256638374,
+          21.59705733707682,
+          34.535263270628306,
           4,
+          1,
           3,
+          4,
           4
-        ]
-      },
-      {
-        "sector": "Developer Tools & Observability",
-        "values": [
-          0.19078435592933604,
-          5.073232599608035,
-          5.5019930874693035,
-          14.858685418311879,
-          13.422003290415429,
-          46.92459499673354,
-          11,
-          38,
-          5,
-          5,
-          2
         ]
       },
       {
         "sector": "Cosmetics",
         "values": [
-          0.07252832054145934,
-          2.047701402239288,
-          9.851841417483186,
-          14.615504234082287,
-          7.584249490399064,
-          14.399046196282406,
-          36,
-          6,
-          6,
-          12,
-          13
+          0.07223862087205934,
+          3.349429267042736,
+          6.250309146991362,
+          15.52267839423138,
+          8.09375623101971,
+          12.594226281649545,
+          22,
+          21,
+          4,
+          13,
+          16
         ]
       },
       {
         "sector": "Oil & Gas Upstream E&P",
         "values": [
-          1.0619768091138224,
-          2.4935152337687727,
-          5.856099437874507,
-          14.606316411515063,
-          5.268618714291917,
-          10.288212103520955,
-          31,
-          35,
-          7,
-          20,
-          17
+          1.0585122014246309,
+          3.370088909896851,
+          5.525438261394577,
+          14.369407405114675,
+          1.8190947855160733,
+          13.820198047253228,
+          21,
+          32,
+          5,
+          30,
+          12
         ]
       },
       {
-        "sector": "Specialty Retail",
+        "sector": "Software - Application",
         "values": [
-          0.22128938273018126,
-          -0.20924917980827962,
-          5.18984721380038,
-          11.451435027319224,
-          5.445427760330435,
-          0.6536797826964813,
-          75,
-          40,
-          8,
-          18,
-          39
+          2.2978601730935537,
+          0.2513242994845788,
+          6.516494045873689,
+          14.358613212354566,
+          3.5522591130730863,
+          12.786303133452858,
+          72,
+          20,
+          6,
+          22,
+          15
         ]
       },
       {
         "sector": "Specialty Business Services",
         "values": [
-          0.06989330613292999,
-          3.874721724653063,
-          8.390277995163785,
-          11.282707782471224,
-          -1.2374050559505911,
-          4.048792143095548,
-          18,
-          14,
-          9,
-          54,
-          31
+          0.07013111583471565,
+          4.605351645516342,
+          7.562183832832559,
+          11.927624702696527,
+          -0.3480474687837187,
+          6.592022581653811,
+          10,
+          10,
+          7,
+          47,
+          21
         ]
       },
       {
         "sector": "Basic Chemicals",
         "values": [
-          0.06884324716560891,
-          4.719571549838353,
-          10.528470945986612,
-          10.94107967164235,
-          3.058606059685709,
-          8.256433891377913,
-          12,
-          5,
-          10,
-          29,
-          19
-        ]
-      },
-      {
-        "sector": "Waste Management",
-        "values": [
-          0.2686454782652034,
-          1.7548593047821637,
-          9.49869522055824,
-          10.365705283438654,
-          5.048995152088498,
-          4.477113434618096,
-          46,
+          0.06873481431895859,
+          6.303434392571616,
+          7.505221661181083,
+          11.702710693469221,
+          2.5529889956755536,
+          5.731718773290928,
+          6,
+          11,
           8,
-          11,
-          22,
-          28
+          24,
+          24
         ]
       },
       {
-        "sector": "Insurance Brokers",
+        "sector": "Developer Tools & Observability",
         "values": [
-          0.3104714079107328,
-          -0.5599407438266257,
-          8.719081461035039,
-          9.483689868701362,
-          -2.560484303398558,
-          -3.302116033449898,
-          87,
-          11,
-          12,
-          65,
-          64
+          0.18945975866633316,
+          2.3728889483082938,
+          7.049429197756307,
+          11.512049722906958,
+          18.433879927546528,
+          42.775785767959505,
+          39,
+          16,
+          9,
+          6,
+          3
+        ]
+      },
+      {
+        "sector": "Cyber Security",
+        "values": [
+          1.0696319420456653,
+          9.554071839088007,
+          10.81917832539665,
+          11.50391729687692,
+          23.789371432924433,
+          29.73575427809756,
+          2,
+          6,
+          10,
+          3,
+          5
         ]
       },
       {
         "sector": "Cruise Lines",
         "values": [
-          0.15990731754072024,
-          0.8389720421021707,
-          5.013653627267001,
-          9.12570678420941,
-          5.336234977557819,
-          -14.519690481153058,
-          58,
-          44,
-          13,
-          19,
-          117
-        ]
-      },
-      {
-        "sector": "Contract Research Organizations (CROs)",
-        "values": [
-          0.10044366564729452,
-          6.937680644583244,
-          12.508558605296582,
-          8.689111053898756,
-          12.808846118765427,
-          24.099505201917083,
-          7,
-          1,
-          14,
-          6,
-          7
-        ]
-      },
-      {
-        "sector": "Gas Utilities",
-        "values": [
-          0.06306062231132281,
-          2.9001618205618307,
-          6.451609405830672,
-          8.563465646762003,
-          1.8958421218386867,
-          0.006058248593854287,
-          26,
-          30,
-          15,
-          35,
-          42
-        ]
-      },
-      {
-        "sector": "Logistics",
-        "values": [
-          0.2743249526124807,
-          3.2330363911979187,
-          5.804143132860773,
-          8.55686069260637,
-          1.930324347218515,
-          -0.22191476473147898,
-          24,
+          0.16103397151929405,
+          2.424885783836772,
+          7.074789638117651,
+          10.497286734966904,
+          8.342965053739682,
+          -13.191375523820636,
           36,
-          16,
-          34,
-          44
+          15,
+          11,
+          12,
+          112
         ]
       },
       {
-        "sector": "Pharmaceutical Distribution",
+        "sector": "Insurance Brokers",
         "values": [
-          0.2457276767524779,
-          -5.343191193079133,
-          1.6949564679918705,
-          8.550050381309537,
-          4.476004820884993,
-          7.4056254502270935,
-          133,
-          71,
-          17,
-          24,
-          23
-        ]
-      },
-      {
-        "sector": "Multi-Utilities",
-        "values": [
-          0.9001943886402411,
-          2.5083781027471996,
-          5.516562615273468,
-          8.220701650267003,
-          2.3440635031060975,
-          -2.945875365587791,
-          30,
-          37,
-          18,
-          30,
-          61
-        ]
-      },
-      {
-        "sector": "Alcoholic Beverages",
-        "values": [
-          0.3030550489867349,
-          -3.161270543725858,
-          1.9530154996587612,
-          8.181222748081618,
-          1.6617655764561867,
-          -2.5119055781069988,
-          121,
-          68,
-          19,
-          37,
-          59
+          0.31323659401751297,
+          0.8529965566895781,
+          7.359515252440563,
+          9.926139957147196,
+          -2.7143222301951098,
+          -1.3785589324308956,
+          66,
+          12,
+          12,
+          70,
+          47
         ]
       },
       {
         "sector": "BNPL",
         "values": [
-          0.03262203960574142,
-          -2.483170734281104,
-          -3.4436947223694503,
-          7.869799043354031,
-          -3.8252808492900803,
-          -20.83874571813561,
-          109,
-          114,
-          20,
-          73,
-          131
+          0.03299931663357976,
+          -1.306136006640246,
+          2.959875728067507,
+          9.674438184735855,
+          2.180799589120319,
+          -21.725890034501283,
+          97,
+          50,
+          13,
+          27,
+          132
         ]
       },
       {
-        "sector": "Electronic Gaming & Multimedia",
+        "sector": "Specialty Retail",
         "values": [
-          0.31895556012065146,
-          -1.6058071556092623,
-          2.791216327254209,
-          7.37425090785877,
-          4.5628503066153625,
-          4.249540729352774,
-          100,
-          59,
-          21,
-          23,
-          29
+          0.21792527773224069,
+          -1.0915461946231164,
+          1.8439040271167606,
+          9.66490461627101,
+          3.8459410534878558,
+          -0.27780652878217627,
+          90,
+          68,
+          14,
+          20,
+          45
+        ]
+      },
+      {
+        "sector": "Pharmaceutical Distribution",
+        "values": [
+          0.24350903119294792,
+          -4.847540967267472,
+          -2.439051338559506,
+          8.986292457766854,
+          0.6074073929149382,
+          8.727034962339308,
+          133,
+          119,
+          15,
+          42,
+          18
+        ]
+      },
+      {
+        "sector": "Private Mortgage Insurance",
+        "values": [
+          0.031062390438801678,
+          3.0335342202549187,
+          3.852541345866034,
+          8.580318208141202,
+          -6.644116697941172,
+          -6.187040961256596,
+          28,
+          41,
+          16,
+          90,
+          75
         ]
       },
       {
         "sector": "Surgical Equipment & Robotics",
         "values": [
-          0.36533707396648724,
-          1.2633570151314721,
-          7.89496839776338,
-          7.084691880381677,
-          0.7110455571293528,
-          -2.016015618288447,
-          51,
-          16,
-          22,
-          46,
-          55
+          0.3645994529726232,
+          3.076226675924776,
+          6.789881285035193,
+          8.240233198793634,
+          0.9618919162623252,
+          1.2985261985995367,
+          27,
+          18,
+          17,
+          40,
+          38
+        ]
+      },
+      {
+        "sector": "Waste Management",
+        "values": [
+          0.2606115555970071,
+          0.6596146211128584,
+          4.82341690981174,
+          7.86588400955559,
+          1.512096299742982,
+          3.86379837039017,
+          69,
+          36,
+          18,
+          33,
+          32
+        ]
+      },
+      {
+        "sector": "Gas Utilities",
+        "values": [
+          0.06217769813553411,
+          2.3835208013173625,
+          4.441469953045862,
+          7.782153485319987,
+          -1.1453025191490607,
+          1.2285078937969596,
+          37,
+          39,
+          19,
+          56,
+          39
+        ]
+      },
+      {
+        "sector": "Multi-Utilities",
+        "values": [
+          0.8928037507602488,
+          2.0362234169404747,
+          3.048247471114096,
+          7.419338114339591,
+          0.2729945051332505,
+          -2.1161937850228463,
+          40,
+          49,
+          20,
+          44,
+          51
         ]
       },
       {
         "sector": "Household & Personal Products",
         "values": [
-          0.738318206909279,
-          -0.40689601817130994,
-          6.480405817093415,
-          6.945672984735141,
-          0.8357661147164963,
-          -1.2276816753706843,
-          83,
-          29,
-          23,
+          0.7293776859093016,
+          0.8625642689397806,
+          2.5283154838282362,
+          7.253964518676392,
+          0.13014514188494086,
+          -3.4099356608439546,
+          65,
+          54,
+          21,
           45,
-          50
+          60
         ]
       },
       {
         "sector": "Oil & Gas Integrated",
         "values": [
-          2.5156555822973634,
-          -2.0191988698879615,
-          0.41540832053658105,
-          6.730223398496338,
-          6.535740350694175,
-          7.505512719242846,
-          105,
+          2.5283023904095683,
+          -0.7002277419228542,
+          -0.779676013315056,
+          7.158633296760275,
+          3.6173864876606787,
+          12.517230899547837,
           83,
-          24,
-          15,
-          22
-        ]
-      },
-      {
-        "sector": "Specialty P&C & Reinsurance",
-        "values": [
-          1.4408569650594887,
-          -0.7677235245131642,
-          4.382222949462555,
-          6.696091243998237,
-          2.209286061109572,
-          4.091220736646428,
-          89,
-          46,
-          25,
-          32,
-          30
-        ]
-      },
-      {
-        "sector": "Home Improvement Retail",
-        "values": [
-          0.4990774899033477,
-          1.9756515430732202,
-          6.102052627020127,
-          6.346830071950782,
-          0.33332848232339174,
-          -0.5831293926490622,
-          38,
-          33,
-          26,
-          50,
-          47
+          98,
+          22,
+          21,
+          17
         ]
       },
       {
         "sector": "Healthcare Support Services",
         "values": [
-          1.169767658335811,
-          -1.0106192200541209,
-          2.6460429061329505,
-          6.2801410625943355,
-          5.126582435093119,
-          5.562457451869607,
-          94,
-          61,
-          27,
-          21,
-          26
+          1.1660225139043685,
+          0.7108123070002303,
+          1.5546769843951092,
+          7.0659694799598105,
+          4.930889848074571,
+          8.377223464067619,
+          68,
+          71,
+          23,
+          17,
+          19
         ]
       },
       {
         "sector": "Tobacco",
         "values": [
-          0.6016849138142455,
-          0.21485914237056036,
-          5.030570499244513,
-          6.200608656036222,
-          7.332717485993268,
-          3.8708488226990134,
-          67,
-          43,
-          28,
-          13,
-          32
+          0.5988292591521314,
+          1.1697879360722307,
+          0.9755740312595185,
+          7.003768733040139,
+          5.311570549235567,
+          5.579784772719454,
+          57,
+          77,
+          24,
+          15,
+          25
         ]
       },
       {
-        "sector": "Consumer Electronics",
+        "sector": "Specialty P&C & Reinsurance",
         "values": [
-          5.477210721841801,
-          2.836757900548026,
-          7.318672560879125,
-          5.815629704430814,
-          9.13442210378481,
-          8.57967647379827,
+          1.4324488335292274,
+          -0.9219420248123389,
+          1.989326554408355,
+          6.877047648870094,
+          0.7950239678413462,
+          5.186051133279146,
+          87,
+          66,
+          25,
+          41,
+          26
+        ]
+      },
+      {
+        "sector": "Home Improvement Retail",
+        "values": [
+          0.49634409826933873,
+          2.3821221874645415,
+          5.545313906167104,
+          6.456259361869643,
+          1.764773554545096,
+          -6.222973092729123,
+          38,
+          30,
+          26,
+          31,
+          77
+        ]
+      },
+      {
+        "sector": "Insurance - Property & Casualty",
+        "values": [
+          0.6334664981595785,
+          -0.7898246625192673,
+          2.6573855140404667,
+          5.9925248265682685,
+          -2.9363288268659415,
+          -5.521434779127921,
+          84,
+          52,
+          27,
+          71,
+          70
+        ]
+      },
+      {
+        "sector": "Rental & Leasing Services",
+        "values": [
+          0.2647528100221953,
+          5.216770478450439,
+          8.878708237074884,
+          5.927800734310584,
+          -0.365505310401959,
+          -9.708921875938225,
+          9,
+          7,
           28,
-          18,
+          48,
+          105
+        ]
+      },
+      {
+        "sector": "Generic Pharmaceuticals",
+        "values": [
+          0.1381705042918606,
+          2.5427506335112815,
+          6.022300934723912,
+          5.890396516647911,
+          9.94379113582957,
+          16.572463150368044,
+          34,
+          23,
           29,
           11,
-          18
+          10
         ]
       },
       {
-        "sector": "Electric Utilities",
+        "sector": "Alcoholic Beverages",
         "values": [
-          0.5027848550861771,
-          1.8290421220988007,
-          3.8704373083985555,
-          5.7919684879371935,
-          2.018906069327131,
-          -3.8402219268159343,
-          42,
-          53,
+          0.2992180229045802,
+          -3.385369988982212,
+          -2.196298013046949,
+          5.7624036268044465,
+          -0.4730195794209635,
+          -2.8904167417219573,
+          128,
+          115,
           30,
-          33,
-          66
+          50,
+          55
         ]
       }
     ],
     "rankings": [
       {
-        "sector": "Cyber Security",
-        "rank1m": 4
-      },
-      {
         "sector": "Liquid Biopsy",
-        "rank1m": 71
+        "rank1m": 42
       },
       {
-        "sector": "AI Servers & Systems",
-        "rank1m": 92
+        "sector": "Cyber Security",
+        "rank1m": 10
       },
       {
-        "sector": "Quantum Computing",
-        "rank1m": 137
-      },
-      {
-        "sector": "Space & Satellites",
-        "rank1m": 125
-      },
-      {
-        "sector": "OLED",
-        "rank1m": 48
+        "sector": "Immunology & Immunotherapy",
+        "rank1m": 63
       },
       {
         "sector": "Contract Research Organizations (CROs)",
-        "rank1m": 14
+        "rank1m": 3
       },
       {
-        "sector": "Cloud & Data Infrastructure",
-        "rank1m": 57
+        "sector": "OLED",
+        "rank1m": 45
+      },
+      {
+        "sector": "Basic Chemicals",
+        "rank1m": 8
       },
       {
         "sector": "Defense & Security",
         "rank1m": 37
       },
       {
-        "sector": "Rental & Leasing Services",
-        "rank1m": 55
-      },
-      {
-        "sector": "Developer Tools & Observability",
-        "rank1m": 5
-      },
-      {
-        "sector": "Basic Chemicals",
-        "rank1m": 10
-      },
-      {
-        "sector": "Oil & Gas Equipment & Services",
-        "rank1m": 47
-      },
-      {
-        "sector": "Life Science Tools & Instruments",
-        "rank1m": 77
-      },
-      {
-        "sector": "Residential Construction",
-        "rank1m": 89
-      },
-      {
-        "sector": "Rare Earth Elements",
-        "rank1m": 132
-      },
-      {
-        "sector": "IT & Electronic Components Distribution",
-        "rank1m": 51
-      },
-      {
-        "sector": "Specialty Business Services",
-        "rank1m": 9
-      },
-      {
-        "sector": "Railroads",
-        "rank1m": 35
-      },
-      {
-        "sector": "Scientific & Technical Instruments",
-        "rank1m": 36
-      },
-      {
-        "sector": "Coal",
-        "rank1m": 69
-      },
-      {
-        "sector": "Shipping",
-        "rank1m": 45
-      },
-      {
-        "sector": "Analog/Power Semiconductors",
-        "rank1m": 115
-      },
-      {
-        "sector": "Logistics",
-        "rank1m": 16
-      },
-      {
-        "sector": "Environmental & Facilities Services",
-        "rank1m": 66
-      },
-      {
-        "sector": "Gas Utilities",
-        "rank1m": 15
-      },
-      {
-        "sector": "Compute Semiconductors & IP",
-        "rank1m": 126
-      },
-      {
-        "sector": "Consumer Electronics",
-        "rank1m": 29
-      },
-      {
-        "sector": "Airlines",
-        "rank1m": 112
-      },
-      {
-        "sector": "Multi-Utilities",
-        "rank1m": 18
-      },
-      {
-        "sector": "Oil & Gas Upstream E&P",
-        "rank1m": 7
-      },
-      {
-        "sector": "Nuclear Energy & Uranium",
-        "rank1m": 131
-      },
-      {
-        "sector": "Building Products",
-        "rank1m": 40
-      },
-      {
-        "sector": "Oil & Gas Midstream & Infrastructure",
-        "rank1m": 41
-      },
-      {
-        "sector": "Construction Materials",
-        "rank1m": 50
-      },
-      {
-        "sector": "Cosmetics",
-        "rank1m": 6
-      },
-      {
-        "sector": "Private Credit",
-        "rank1m": 104
-      },
-      {
-        "sector": "Home Improvement Retail",
-        "rank1m": 26
-      },
-      {
-        "sector": "Immunology & Immunotherapy",
-        "rank1m": 75
-      },
-      {
-        "sector": "Generic Pharmaceuticals",
-        "rank1m": 33
-      },
-      {
-        "sector": "Independent Power Producers",
-        "rank1m": 79
-      },
-      {
-        "sector": "Electric Utilities",
-        "rank1m": 30
-      },
-      {
-        "sector": "Medical Devices",
-        "rank1m": 46
-      },
-      {
-        "sector": "Stock & Derivatives Exchanges",
-        "rank1m": 34
-      },
-      {
-        "sector": "Network Equipment",
-        "rank1m": 109
-      },
-      {
-        "sector": "Waste Management",
-        "rank1m": 11
-      },
-      {
-        "sector": "Lithium",
+        "sector": "Space & Satellites",
         "rank1m": 123
       },
       {
-        "sector": "Auto & Truck Dealerships",
-        "rank1m": 68
-      },
-      {
-        "sector": "Private Mortgage Insurance",
-        "rank1m": 64
-      },
-      {
-        "sector": "HVAC, Air Controls",
-        "rank1m": 99
-      },
-      {
-        "sector": "Surgical Equipment & Robotics",
-        "rank1m": 22
-      },
-      {
-        "sector": "Capital Markets",
-        "rank1m": 82
-      },
-      {
-        "sector": "Auto Manufacturers",
-        "rank1m": 87
-      },
-      {
-        "sector": "Network Semiconductors",
-        "rank1m": 127
-      },
-      {
-        "sector": "REITs",
-        "rank1m": 76
-      },
-      {
-        "sector": "Specialty Chemicals",
-        "rank1m": 49
-      },
-      {
-        "sector": "IT Consulting",
-        "rank1m": 1
-      },
-      {
-        "sector": "Cruise Lines",
-        "rank1m": 13
-      },
-      {
-        "sector": "Asset Management",
-        "rank1m": 94
-      },
-      {
-        "sector": "Packaging & Containers",
-        "rank1m": 43
-      },
-      {
-        "sector": "Industrial Equipment & Distribution & Tools",
-        "rank1m": 78
-      },
-      {
-        "sector": "Software - Application",
-        "rank1m": 2
-      },
-      {
-        "sector": "Regional Banks",
-        "rank1m": 73
-      },
-      {
-        "sector": "Muscle & Neuromuscular Pharmaceuticals & Therapeutics",
-        "rank1m": 102
-      },
-      {
-        "sector": "Biotechnology",
-        "rank1m": 100
-      },
-      {
-        "sector": "Paints & Coatings",
-        "rank1m": 67
-      },
-      {
-        "sector": "Tobacco",
+        "sector": "Rental & Leasing Services",
         "rank1m": 28
       },
       {
-        "sector": "Optical & Interconnect Components",
-        "rank1m": 128
+        "sector": "Specialty Business Services",
+        "rank1m": 7
       },
       {
-        "sector": "Insurance - Property & Casualty",
-        "rank1m": 32
-      },
-      {
-        "sector": "Airports & Air Services",
-        "rank1m": 84
-      },
-      {
-        "sector": "Semiconductor Manufacturing & Packaging",
-        "rank1m": 129
-      },
-      {
-        "sector": "Delivery Platform",
-        "rank1m": 60
-      },
-      {
-        "sector": "Electrical Equipment & Parts & Systems",
-        "rank1m": 122
-      },
-      {
-        "sector": "Japan Banks",
-        "rank1m": 120
-      },
-      {
-        "sector": "Specialty Retail",
-        "rank1m": 8
+        "sector": "Residential Construction",
+        "rank1m": 91
       },
       {
         "sector": "Memory & Storage",
         "rank1m": 133
       },
       {
-        "sector": "Trucking",
-        "rank1m": 88
-      },
-      {
-        "sector": "Neo-Cloud & Hosting",
-        "rank1m": 138
-      },
-      {
-        "sector": "Automation & Motion & Control",
-        "rank1m": 95
-      },
-      {
-        "sector": "Food Retail & Distribution",
-        "rank1m": 31
-      },
-      {
-        "sector": "Aerospace & Aviation",
-        "rank1m": 114
-      },
-      {
-        "sector": "Pollution & Treatment Controls",
-        "rank1m": 90
-      },
-      {
-        "sector": "Household & Personal Products",
-        "rank1m": 23
-      },
-      {
-        "sector": "Life, Health & Retirement Insurance",
-        "rank1m": 80
-      },
-      {
-        "sector": "Traditional Media & Content",
+        "sector": "Auto & Truck Dealerships",
         "rank1m": 70
       },
       {
+        "sector": "Life Science Tools & Instruments",
+        "rank1m": 61
+      },
+      {
+        "sector": "Oil & Gas Equipment & Services",
+        "rank1m": 38
+      },
+      {
+        "sector": "Auto Manufacturers",
+        "rank1m": 67
+      },
+      {
+        "sector": "Private Credit",
+        "rank1m": 87
+      },
+      {
+        "sector": "Rare Earth Elements",
+        "rank1m": 136
+      },
+      {
+        "sector": "Ophthalmology Pharmaceuticals & Therapeutics",
+        "rank1m": 119
+      },
+      {
+        "sector": "Shipping",
+        "rank1m": 35
+      },
+      {
+        "sector": "Oil & Gas Upstream E&P",
+        "rank1m": 5
+      },
+      {
+        "sector": "Cosmetics",
+        "rank1m": 4
+      },
+      {
+        "sector": "Environmental & Facilities Services",
+        "rank1m": 68
+      },
+      {
+        "sector": "Medical Devices",
+        "rank1m": 32
+      },
+      {
+        "sector": "AI Servers & Systems",
+        "rank1m": 102
+      },
+      {
+        "sector": "Scientific & Technical Instruments",
+        "rank1m": 40
+      },
+      {
+        "sector": "Surgical Equipment & Robotics",
+        "rank1m": 17
+      },
+      {
+        "sector": "Private Mortgage Insurance",
+        "rank1m": 16
+      },
+      {
+        "sector": "Capital Markets",
+        "rank1m": 66
+      },
+      {
+        "sector": "Neo-Cloud & Hosting",
+        "rank1m": 137
+      },
+      {
+        "sector": "Railroads",
+        "rank1m": 34
+      },
+      {
+        "sector": "Network Equipment",
+        "rank1m": 96
+      },
+      {
+        "sector": "IT & Electronic Components Distribution",
+        "rank1m": 41
+      },
+      {
+        "sector": "Generic Pharmaceuticals",
+        "rank1m": 29
+      },
+      {
+        "sector": "Compute Semiconductors & IP",
+        "rank1m": 125
+      },
+      {
+        "sector": "Cruise Lines",
+        "rank1m": 11
+      },
+      {
+        "sector": "Gas Utilities",
+        "rank1m": 19
+      },
+      {
+        "sector": "Home Improvement Retail",
+        "rank1m": 26
+      },
+      {
+        "sector": "Developer Tools & Observability",
+        "rank1m": 9
+      },
+      {
+        "sector": "Multi-Utilities",
+        "rank1m": 20
+      },
+      {
+        "sector": "Building Products",
+        "rank1m": 44
+      },
+      {
+        "sector": "Lithium",
+        "rank1m": 127
+      },
+      {
+        "sector": "Oil & Gas Midstream & Infrastructure",
+        "rank1m": 39
+      },
+      {
+        "sector": "Delivery Platform",
+        "rank1m": 62
+      },
+      {
         "sector": "Engineering & Construction",
+        "rank1m": 112
+      },
+      {
+        "sector": "Optical & Interconnect Components",
+        "rank1m": 128
+      },
+      {
+        "sector": "Cloud & Data Infrastructure",
+        "rank1m": 82
+      },
+      {
+        "sector": "Nuclear Energy & Uranium",
+        "rank1m": 131
+      },
+      {
+        "sector": "Restaurants",
+        "rank1m": 33
+      },
+      {
+        "sector": "Construction Materials",
+        "rank1m": 47
+      },
+      {
+        "sector": "Muscle & Neuromuscular Pharmaceuticals & Therapeutics",
+        "rank1m": 105
+      },
+      {
+        "sector": "Analog/Power Semiconductors",
         "rank1m": 118
+      },
+      {
+        "sector": "Biotechnology",
+        "rank1m": 84
+      },
+      {
+        "sector": "Electric Utilities",
+        "rank1m": 43
+      },
+      {
+        "sector": "REITs",
+        "rank1m": 77
+      },
+      {
+        "sector": "Asset Management",
+        "rank1m": 86
+      },
+      {
+        "sector": "Tobacco",
+        "rank1m": 24
+      },
+      {
+        "sector": "Specialty Chemicals",
+        "rank1m": 51
+      },
+      {
+        "sector": "Electronic Manufacturing Services",
+        "rank1m": 130
+      },
+      {
+        "sector": "Coal",
+        "rank1m": 85
+      },
+      {
+        "sector": "Airlines",
+        "rank1m": 111
+      },
+      {
+        "sector": "Quantum Computing",
+        "rank1m": 138
+      },
+      {
+        "sector": "Stock & Derivatives Exchanges",
+        "rank1m": 36
+      },
+      {
+        "sector": "Network Semiconductors",
+        "rank1m": 121
+      },
+      {
+        "sector": "Household & Personal Products",
+        "rank1m": 21
       },
       {
         "sector": "Insurance Brokers",
         "rank1m": 12
       },
       {
-        "sector": "Specialty Industrial Machinery",
-        "rank1m": 85
-      },
-      {
-        "sector": "Specialty P&C & Reinsurance",
-        "rank1m": 25
-      },
-      {
-        "sector": "Food Products & Ingredients",
-        "rank1m": 54
-      },
-      {
-        "sector": "Real Estate Investment and Services",
-        "rank1m": 42
-      },
-      {
-        "sector": "Crypto",
-        "rank1m": 136
-      },
-      {
-        "sector": "Banks",
-        "rank1m": 105
+        "sector": "Industrial Equipment & Distribution & Tools",
+        "rank1m": 72
       },
       {
         "sector": "Healthcare Support Services",
-        "rank1m": 27
+        "rank1m": 23
+      },
+      {
+        "sector": "Waste Management",
+        "rank1m": 18
+      },
+      {
+        "sector": "Aerospace & Aviation",
+        "rank1m": 113
+      },
+      {
+        "sector": "Paints & Coatings",
+        "rank1m": 52
+      },
+      {
+        "sector": "Software - Application",
+        "rank1m": 6
+      },
+      {
+        "sector": "IT Consulting",
+        "rank1m": 1
       },
       {
         "sector": "Semiconductor Equipment & Materials",
         "rank1m": 135
       },
       {
-        "sector": "Agriculture",
-        "rank1m": 111
-      },
-      {
-        "sector": "Credit Services",
-        "rank1m": 74
-      },
-      {
-        "sector": "General Merchandise & Discount Retail",
-        "rank1m": 62
-      },
-      {
-        "sector": "Sports & Entertainment",
-        "rank1m": 101
-      },
-      {
-        "sector": "Electronic Gaming & Multimedia",
-        "rank1m": 21
-      },
-      {
-        "sector": "Drug Manufacturers",
-        "rank1m": 53
-      },
-      {
-        "sector": "Apparel and Accessories",
-        "rank1m": 58
-      },
-      {
-        "sector": "Farm & Heavy Construction Machinery",
-        "rank1m": 124
+        "sector": "Electrical Equipment & Parts & Systems",
+        "rank1m": 114
       },
       {
         "sector": "Obesity Pharmaceuticals & Therapeutics",
-        "rank1m": 110
+        "rank1m": 109
       },
       {
-        "sector": "Oil & Gas Integrated",
-        "rank1m": 24
+        "sector": "Packaging & Containers",
+        "rank1m": 49
       },
       {
-        "sector": "Casino Resorts",
-        "rank1m": 81
+        "sector": "Regional Banks",
+        "rank1m": 78
       },
       {
-        "sector": "Solar",
-        "rank1m": 96
+        "sector": "Food Products & Ingredients",
+        "rank1m": 50
       },
       {
-        "sector": "Financial Data & Analytics",
-        "rank1m": 3
+        "sector": "Apparel and Accessories",
+        "rank1m": 59
       },
       {
-        "sector": "BNPL",
-        "rank1m": 20
-      },
-      {
-        "sector": "Education",
-        "rank1m": 61
-      },
-      {
-        "sector": "Restaurants",
-        "rank1m": 56
-      },
-      {
-        "sector": "Electronic Manufacturing Services",
-        "rank1m": 134
-      },
-      {
-        "sector": "Alumunium",
-        "rank1m": 108
-      },
-      {
-        "sector": "Steel",
-        "rank1m": 38
-      },
-      {
-        "sector": "Ophthalmology Pharmaceuticals & Therapeutics",
-        "rank1m": 113
-      },
-      {
-        "sector": "Telecom Services",
-        "rank1m": 98
-      },
-      {
-        "sector": "Fintech",
-        "rank1m": 72
-      },
-      {
-        "sector": "Advertising Agencies",
-        "rank1m": 97
-      },
-      {
-        "sector": "Lodging",
-        "rank1m": 44
-      },
-      {
-        "sector": "Auto Parts & Systems",
-        "rank1m": 107
-      },
-      {
-        "sector": "Alcoholic Beverages",
-        "rank1m": 19
-      },
-      {
-        "sector": "Bulk & Copper",
-        "rank1m": 121
-      },
-      {
-        "sector": "iGaming",
-        "rank1m": 103
-      },
-      {
-        "sector": "Gold & Silver",
-        "rank1m": 119
-      },
-      {
-        "sector": "China Internet Platforms",
-        "rank1m": 86
-      },
-      {
-        "sector": "Mobility Platforms",
-        "rank1m": 65
-      },
-      {
-        "sector": "Water Utilities",
-        "rank1m": 52
-      },
-      {
-        "sector": "E-commerce Platform",
-        "rank1m": 63
-      },
-      {
-        "sector": "Non-Alcoholic Beverages",
-        "rank1m": 39
-      },
-      {
-        "sector": "mRNA & RNA Pharmaceuticals & Therapeutics",
-        "rank1m": 116
-      },
-      {
-        "sector": "Specialty Metals & Materials",
-        "rank1m": 130
-      },
-      {
-        "sector": "AI Hyperscalers",
-        "rank1m": 106
-      },
-      {
-        "sector": "Pharmaceutical Distribution",
-        "rank1m": 17
-      },
-      {
-        "sector": "Travel Services",
-        "rank1m": 91
+        "sector": "Life, Health & Retirement Insurance",
+        "rank1m": 69
       },
       {
         "sector": "China Auto Manufacturers",
         "rank1m": 93
       },
       {
-        "sector": "Digital Media & Platforms",
-        "rank1m": 59
+        "sector": "Oil & Gas Integrated",
+        "rank1m": 22
       },
       {
-        "sector": "Financial Brokerage",
+        "sector": "Insurance - Property & Casualty",
+        "rank1m": 27
+      },
+      {
+        "sector": "Specialty Industrial Machinery",
+        "rank1m": 74
+      },
+      {
+        "sector": "Real Estate Investment and Services",
+        "rank1m": 56
+      },
+      {
+        "sector": "Specialty P&C & Reinsurance",
+        "rank1m": 25
+      },
+      {
+        "sector": "Drug Manufacturers",
+        "rank1m": 60
+      },
+      {
+        "sector": "Semiconductor Manufacturing & Packaging",
+        "rank1m": 129
+      },
+      {
+        "sector": "Specialty Retail",
+        "rank1m": 14
+      },
+      {
+        "sector": "Farm & Heavy Construction Machinery",
         "rank1m": 117
       },
       {
-        "sector": "Oil & Gas Downstream & Refining",
+        "sector": "HVAC, Air Controls",
+        "rank1m": 104
+      },
+      {
+        "sector": "Alumunium",
+        "rank1m": 94
+      },
+      {
+        "sector": "General Merchandise & Discount Retail",
+        "rank1m": 55
+      },
+      {
+        "sector": "Casino Resorts",
+        "rank1m": 79
+      },
+      {
+        "sector": "Japan Banks",
+        "rank1m": 122
+      },
+      {
+        "sector": "BNPL",
+        "rank1m": 13
+      },
+      {
+        "sector": "E-commerce Platform",
+        "rank1m": 57
+      },
+      {
+        "sector": "Agriculture",
+        "rank1m": 116
+      },
+      {
+        "sector": "Food Retail & Distribution",
+        "rank1m": 53
+      },
+      {
+        "sector": "Sports & Entertainment",
+        "rank1m": 97
+      },
+      {
+        "sector": "Banks",
+        "rank1m": 100
+      },
+      {
+        "sector": "mRNA & RNA Pharmaceuticals & Therapeutics",
+        "rank1m": 98
+      },
+      {
+        "sector": "Logistics",
+        "rank1m": 46
+      },
+      {
+        "sector": "Auto Parts & Systems",
+        "rank1m": 107
+      },
+      {
+        "sector": "Traditional Media & Content",
+        "rank1m": 80
+      },
+      {
+        "sector": "Bulk & Copper",
+        "rank1m": 126
+      },
+      {
+        "sector": "Credit Services",
+        "rank1m": 65
+      },
+      {
+        "sector": "Automation & Motion & Control",
+        "rank1m": 89
+      },
+      {
+        "sector": "Independent Power Producers",
+        "rank1m": 81
+      },
+      {
+        "sector": "China Internet Platforms",
+        "rank1m": 101
+      },
+      {
+        "sector": "Non-Alcoholic Beverages",
+        "rank1m": 31
+      },
+      {
+        "sector": "Crypto",
+        "rank1m": 134
+      },
+      {
+        "sector": "Airports & Air Services",
+        "rank1m": 75
+      },
+      {
+        "sector": "iGaming",
+        "rank1m": 108
+      },
+      {
+        "sector": "Fintech",
+        "rank1m": 64
+      },
+      {
+        "sector": "Pollution & Treatment Controls",
+        "rank1m": 92
+      },
+      {
+        "sector": "Financial Data & Analytics",
+        "rank1m": 2
+      },
+      {
+        "sector": "Telecom Services",
+        "rank1m": 103
+      },
+      {
+        "sector": "Electronic Gaming & Multimedia",
+        "rank1m": 58
+      },
+      {
+        "sector": "Education",
+        "rank1m": 88
+      },
+      {
+        "sector": "Mobility Platforms",
+        "rank1m": 76
+      },
+      {
+        "sector": "Gold & Silver",
+        "rank1m": 115
+      },
+      {
+        "sector": "Steel",
+        "rank1m": 48
+      },
+      {
+        "sector": "Travel Services",
+        "rank1m": 90
+      },
+      {
+        "sector": "Advertising Agencies",
+        "rank1m": 99
+      },
+      {
+        "sector": "Consumer Electronics",
         "rank1m": 83
+      },
+      {
+        "sector": "Alcoholic Beverages",
+        "rank1m": 30
+      },
+      {
+        "sector": "Lodging",
+        "rank1m": 54
+      },
+      {
+        "sector": "Trucking",
+        "rank1m": 106
+      },
+      {
+        "sector": "Water Utilities",
+        "rank1m": 71
+      },
+      {
+        "sector": "AI Hyperscalers",
+        "rank1m": 110
+      },
+      {
+        "sector": "Pharmaceutical Distribution",
+        "rank1m": 15
+      },
+      {
+        "sector": "Digital Media & Platforms",
+        "rank1m": 73
+      },
+      {
+        "sector": "Specialty Metals & Materials",
+        "rank1m": 132
+      },
+      {
+        "sector": "Solar",
+        "rank1m": 120
+      },
+      {
+        "sector": "Financial Brokerage",
+        "rank1m": 124
+      },
+      {
+        "sector": "Oil & Gas Downstream & Refining",
+        "rank1m": 95
       }
     ]
   }
