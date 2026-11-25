@@ -10,6 +10,7 @@ on:
         default: false
 permissions:
   contents: write
+  actions: read
   pages: write
   id-token: write
 concurrency:
@@ -84,9 +85,25 @@ jobs:
       - uses: actions/upload-pages-artifact@v3
         with:
           path: '.'
+          name: github-pages-${{ github.run_attempt }}
+      - name: Wait for the uploaded Pages artifact
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          for attempt in {1..24}; do
+            count=$(gh api "repos/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID/artifacts?name=github-pages-$GITHUB_RUN_ATTEMPT" --jq '.total_count') || count=0
+            if [[ "$count" == 1 ]]; then
+              sleep 10
+              exit 0
+            fi
+            sleep 5
+          done
+          exit 1
       - name: Deploy
         id: deployment
         uses: actions/deploy-pages@v4
+        with:
+          artifact_name: github-pages-${{ github.run_attempt }}
       - name: Report collection failure after preserving and publishing available data
         if: github.event_name != 'push' && (steps.portfolio.outcome == 'failure' || steps.earnings.outcome == 'failure' || steps.fx.outcome == 'failure' || steps.breadth.outcome == 'failure' || steps.adr.outcome == 'failure')
         run: exit 1
