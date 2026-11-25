@@ -2,4 +2,4 @@
 2:I[6960,[],""]
 3:I[2390,[],""]
 :HL["/market-lens/_next/static/css/fce1aa3f2dd5a64a.css","style"]
-0:{"rsc":["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/market-lens/_next/static/css/fce1aa3f2dd5a64a.css","precedence":"next"}]],["$","html",null,{"lang":"ko","children":["$","body",null,{"children":["$","section",null,{"id":"market-lens-root","children":["$","$L2",null,{"parallelRouterKey":"children","template":["$","$L3",null,{}]}]}]}]}]]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"2bT-WDqwz3Mu2tJODy1-_"}
+0:{"rsc":["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/market-lens/_next/static/css/fce1aa3f2dd5a64a.css","precedence":"next"}]],["$","html",null,{"lang":"ko","children":["$","body",null,{"children":["$","section",null,{"id":"market-lens-root","children":["$","$L2",null,{"parallelRouterKey":"children","template":["$","$L3",null,{}]}]}]}]}]]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"857PTk92oOq-bS6dQ3WdE"}
